@@ -19,8 +19,11 @@ public class WarmBrownNativeWindow {
   [DllImport("user32.dll")] public static extern void mouse_event(uint flags,uint dx,uint dy,uint data,UIntPtr extra);
 }
 '@
-$nativeWindow = Get-Process -Name wechatdevtools | Where-Object { $_.MainWindowTitle -like 'warm-brown-cottage*' -and $_.MainWindowHandle -ne 0 } | Select-Object -First 1
-if (-not $nativeWindow) { throw 'The warm-brown-cottage DevTools project window is not open.' }
+$nativeProjectRoot = Split-Path -Parent $PSScriptRoot
+$nativeProjectConfig = Get-Content -LiteralPath (Join-Path $nativeProjectRoot 'project.config.json') -Raw -Encoding UTF8 | ConvertFrom-Json
+$nativeProjectTitle = [string]$nativeProjectConfig.projectname
+$nativeWindow = Get-Process -Name wechatdevtools | Where-Object { $_.MainWindowTitle.StartsWith($nativeProjectTitle, [StringComparison]::OrdinalIgnoreCase) -and $_.MainWindowHandle -ne 0 } | Select-Object -First 1
+if (-not $nativeWindow) { throw "The $nativeProjectTitle DevTools project window is not open." }
 $nativeRect = New-Object WarmBrownNativeWindow+RECT
 [void][WarmBrownNativeWindow]::GetWindowRect($nativeWindow.MainWindowHandle,[ref]$nativeRect)
 if ($X -ge 0 -and $Y -ge 0) {
