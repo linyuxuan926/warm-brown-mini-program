@@ -1,0 +1,15 @@
+<view class="cat-home">
+  <view class="cat-welcome" aria-label="WELCOME"><text class="cat-letter" wx:for="{{letters}}" wx:key="id" style="transform:translateY({{item.y}}rpx) rotate({{item.r}}deg)">{{item.c}}</text></view>
+  <view class="brand-seal">WARM BROWN</view>
+  <image class="cat-art" src="/assets/illustrations/cat-hero.png" mode="aspectFit" aria-label="戴着泡芙围圈的小猫和甜品手绘插画" />
+  <view class="cat-caption"><text>每天现烤</text><text class="caption-dot">·</text><text>把日子过得松软一点</text></view>
+  <view class="cat-services">
+    <button class="cat-button cat-service" data-mode="pickup" bindtap="order" hover-class="pressed"><image class="cat-service-icon" src="/assets/icons/pickup.png" mode="aspectFit" /><view class="cat-service-title">门店自取</view><text class="cat-service-subtitle">PICK UP</text></button>
+    <view class="service-line"></view>
+    <button class="cat-button cat-service" data-mode="shipping" bindtap="order" hover-class="pressed"><image class="cat-service-icon" src="/assets/icons/shipping.png" mode="aspectFit" /><view class="cat-service-title">全国邮寄</view><text class="cat-service-subtitle">EXPRESS</text></button>
+  </view>
+  <button class="cat-button cat-member" bindtap="member" hover-class="pressed">
+    <view class="member-copy"><view class="member-title">会员中心</view><view class="member-english">Member Center</view><view class="member-note">收藏属于你的每一份甜 <text class="member-arrow">→</text></view></view>
+    <image class="member-crown" src="/assets/icons/crown-cream.png" mode="aspectFit" />
+  </button>
+</view>

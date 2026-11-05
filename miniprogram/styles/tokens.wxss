@@ -1,0 +1,11 @@
+page {
+  --paper: #FAF3E3;
+  --paper-deep: #F5EAD7;
+  --card: #FFFCF6;
+  --brown: #60371F;
+  --ink: #3F2A1F;
+  --muted: #88684F;
+  --line: #E7D8C4;
+  --cream: #FFF7E8;
+  --gold: #C6A16B;
+}

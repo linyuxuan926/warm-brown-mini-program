@@ -1,0 +1,13 @@
+.success-page { text-align: center; }
+.success-art { width: 450rpx; height: 290rpx; margin: 14rpx auto 20rpx; }
+.success-page > .eyebrow { font-size: 16rpx; letter-spacing: 2rpx; }
+.success-page .title { font-size: 39rpx; margin-top: 16rpx; }
+.success-copy { color: #775137; font-size: 25rpx; margin: 20rpx 0; }
+.success-copy > text { display: block; font-size: 23rpx; color: #88684F; margin-top: 10rpx; }
+.pickup-code { border: 1rpx dashed #BCA48A; border-radius: 18rpx; padding: 21rpx; margin: 35rpx 0; }
+.pickup-code > text { color: #88684F; font-size: 22rpx; }
+.pickup-code > view { font: 73rpx/1.3 Georgia, serif; color: #60371F; letter-spacing: 14rpx; }
+.success-receipt { border-top: 1rpx solid #D6C1A5; border-bottom: 1rpx solid #D6C1A5; padding: 22rpx 0; margin: 34rpx 0; text-align: left; }
+.order-number { width: 100%; font-size: 22rpx; margin-top: 9rpx; text-align: left; }
+.order-number text:last-child { font-size: 20rpx; }
+.success-page .btn-outline { margin-top: 18rpx; }

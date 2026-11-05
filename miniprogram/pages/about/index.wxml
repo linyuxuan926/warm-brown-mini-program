@@ -1,0 +1,5 @@
+<view class="page about-page">
+  <view class="about-brand"><image src="/assets/illustrations/cat-hero.png" mode="aspectFit"/><text class="eyebrow">BAKED WITH A LITTLE LOVE</text><text class="serif brand-title">暖棕小屋</text><text class="brand-en serif">Warm Brown</text><text class="small muted">烘焙 · 咖啡 · 每天一点小美好</text></view>
+  <view class="about-story"><view wx:for="{{sections}}" wx:key="number" class="story-row"><text class="story-number serif">{{item.number}}</text><view><text class="serif story-title">{{item.title}}</text><text class="story-text">{{item.text}}</text></view></view></view>
+  <view class="about-links"><button class="btn-outline" bindtap="themes">挑选我的首页风格</button><button class="btn-outline" bindtap="store">看看这间演示小屋</button></view><view class="about-footer"><text class="serif">Thank you for stopping by.</text><text>微信原生小程序 · 本地演示版 {{version}}</text><text>重置入口：「我的」页面底部，需二次确认。</text><text>图片与图标均随项目本地提供。</text></view>
+</view>

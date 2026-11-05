@@ -1,0 +1,6 @@
+
+> warm-brown-mini-program@1.0.0 verify
+> node scripts/verify-project.js
+
+Native sources: 16 routes, 21 WXML templates, 28 JavaScript files, 57 PNGs; 407.5 KB.
+Routes, JSON, JavaScript syntax, handlers, 5 component bundles/registrations/dependencies, WXML aliases and static image paths: PASS

@@ -1,0 +1,17 @@
+.payment-page { padding-top: 45rpx; }
+.payment-stamp { width: 246rpx; margin: 0 auto 24rpx; border: 1rpx solid #B49A77; border-radius: 50%; text-align: center; padding: 13rpx 8rpx; font: 19rpx Georgia, serif; letter-spacing: 3rpx; color: #88684F; transform: rotate(-5deg); }
+.payment-heading { text-align: center; font-size: 38rpx; letter-spacing: 3rpx; font-weight: 600; }
+.payment-description { text-align: center; font-size: 23rpx; color: #88684F; margin-top: 10rpx; }
+.payment-amount { text-align: center; font: 40rpx/1.2 Georgia, serif; color: #60371F; margin-top: 40rpx; }
+.payment-amount text { font-size: 90rpx; margin-left: 10rpx; }
+.payment-order { text-align: center; color: #88684F; font-size: 20rpx; margin: 18rpx 0 38rpx; overflow-wrap: anywhere; }
+.payment-methods { border-top: 1rpx solid #D6C1A5; border-bottom: 1rpx solid #D6C1A5; margin: 32rpx 0; }
+.payment-method { display: flex; align-items: center; justify-content: space-between; width: 100%; text-align: left; padding: 27rpx 8rpx; }
+.payment-method + .payment-method { border-top: 1rpx solid #E7D8C4; }
+.radio-mark { width: 35rpx; height: 35rpx; border: 2rpx solid #BCA48A; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10rpx; }
+.radio-mark view { width: 19rpx; height: 19rpx; background: #60371F; border-radius: 50%; }
+.chosen .radio-mark { border-color: #60371F; }
+.balance-tools { display: flex; justify-content: flex-end; gap: 30rpx; margin-top: -14rpx; margin-bottom: 28rpx; }
+.payment-primary { width: 100%; margin-top: 32rpx; }
+.payment-outcomes { display: flex; gap: 20rpx; margin-top: 20rpx; }
+.payment-outcomes button { flex: 1; font-size: 25rpx; }

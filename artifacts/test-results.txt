@@ -1,0 +1,45 @@
+
+> warm-brown-mini-program@1.0.0 test
+> node --test tests/*.test.js
+
+✔ seed catalog, ledger balances, owned coupons and order status coverage are coherent (13.4807ms)
+✔ specifications are required; same spec merges and different spec changes price (6.133ms)
+✔ switching incompatible mode requires explicit removal and preserves compatible items (6.5311ms)
+✔ four fulfillment modes can pay and complete with correct states and one-time points (29.2815ms)
+✔ creation token prevents duplicate orders while preserving a subsequently added cart (13.4792ms)
+✔ pending reservation prevents overbooking; cancel releases inventory (7.6138ms)
+✔ payment cancellation and failure retain pending order and coupon reservation for retry (6.7414ms)
+✔ cancel order releases coupon and permits a new valid order (6.2328ms)
+✔ coupon thresholds, category scope, mode restrictions and expiry are enforced (6.9005ms)
+✔ fees use product subtotal; delivery and postal region restrictions block submission (7.5485ms)
+✔ contact, phone, table and pickup fields reject invalid input without mutation (4.6547ms)
+✔ balance payment and recharge are atomic and idempotent with matching ledgers (7.1983ms)
+✔ insufficient balance leaves pending state, inventory, coupon and ledger intact (6.138ms)
+✔ claiming is idempotent and points redemption deducts with a matching record (6.2875ms)
+✔ address CRUD validates, keeps one default, and order saves independent address snapshot (6.6705ms)
+✔ reordering uses current price/spec/mode and does not mutate historical snapshots (7.8101ms)
+✔ themes, addresses, cart, transactions and orders persist across cold startup (9.7715ms)
+✔ storage failure rolls back every part of the transaction; malformed old storage recovers (9.5894ms)
+✔ search/category are combined predictably and returned objects cannot mutate persisted state (3.3025ms)
+✔ older snapshots preserve business data, repair absent ledger fields and allocate collision-free IDs (13.6429ms)
+✔ structurally corrupted stored entities recover without exposing nulls to page renderers (4.3888ms)
+✔ legacy minimal member inherits identity defaults and malformed claim markers become a usable array (7.3817ms)
+✔ every referenced native component has its complete bundle and executes one Component registration (23.0991ms)
+✔ component graph rejects incomplete bundles, incorrect component flags and missing registration (37.4074ms)
+✔ component graph resolves nested dependencies relative to their owning component (55.151ms)
+✔ component graph reports execution failures before claiming a component is loadable (19.2929ms)
+✔ official WXML compiler emits each home branch, its hero image and order buttons (37.0418ms)
+✔ native page handlers complete dineIn selection, coupon, payment retry and order progression (60.79ms)
+✔ native page handlers complete pickup selection, coupon, payment retry and order progression (21.6303ms)
+✔ native page handlers complete delivery selection, coupon, payment retry and order progression (28.6784ms)
+✔ native page handlers complete shipping selection, coupon, payment retry and order progression (26.5051ms)
+✔ native mode confirmation can cancel incompatible change and later remove it explicitly (8.9123ms)
+✔ native checkout exposes invalid delivery address and recovers after reselection (6.6838ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 320.7354

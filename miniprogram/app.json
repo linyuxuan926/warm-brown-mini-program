@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/home/index", "pages/menu/index", "pages/orders/index", "pages/mine/index",
+    "pages/checkout/index", "pages/payment/index", "pages/success/index", "pages/order-detail/index",
+    "pages/member/index", "pages/wallet/index", "pages/coupons/index", "pages/points/index",
+    "pages/addresses/index", "pages/themes/index", "pages/store/index", "pages/about/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "暖棕小屋·烘焙",
+    "navigationBarBackgroundColor": "#FAF3E3",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FAF3E3",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#97745A", "selectedColor": "#60371F", "backgroundColor": "#FFFCF6", "borderStyle": "white",
+    "list": [
+      { "pagePath": "pages/home/index", "text": "首页", "iconPath": "assets/tab/home.png", "selectedIconPath": "assets/tab/home-active.png" },
+      { "pagePath": "pages/menu/index", "text": "点单", "iconPath": "assets/tab/menu.png", "selectedIconPath": "assets/tab/menu-active.png" },
+      { "pagePath": "pages/orders/index", "text": "订单", "iconPath": "assets/tab/orders.png", "selectedIconPath": "assets/tab/orders-active.png" },
+      { "pagePath": "pages/mine/index", "text": "我的", "iconPath": "assets/tab/mine.png", "selectedIconPath": "assets/tab/mine-active.png" }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,11 @@
+<view class="page wallet-page">
+  <view class="wallet-head"><text class="eyebrow">SAVE A LITTLE SWEETNESS</text><text class="serif title">给下一次美好，留点余地。</text></view>
+  <view class="balance-panel"><text class="balance-label">我的演示余额 / 元</text><text class="balance-amount">{{balanceText}}</text><view class="row between"><text>{{member.loggedIn ? member.level : '未登录演示账户'}}</text><text class="balance-caption">WARM BROWN WALLET</text></view></view>
+  <view class="notice">课程演示 · 模拟储值，不调用微信支付，不发生真实扣款。赠金与本金均可用于本地余额支付。</view>
+  <button wx:if="{{!member.loggedIn}}" class="btn login-btn" bindtap="login">先登录演示会员</button>
+  <view class="section-heading"><text class="serif section-title">挑一份小心意</text><text class="muted small">每一笔储值，都会留存记录。</text></view>
+  <view class="recharge-grid"><view wx:for="{{plans}}" wx:key="amount" data-amount="{{item.amount}}" bindtap="choose" class="recharge-plan {{selected === item.amount ? 'chosen' : ''}}"><text class="plan-amount"><text class="yuan">¥</text>{{item.title}}</text><text class="gift">{{item.gift}}</text><text class="plan-received">{{item.received}}</text><image wx:if="{{selected === item.amount}}" src="/assets/icons/check.png" mode="aspectFit"/></view></view>
+  <button class="btn recharge-btn" bindtap="recharge" disabled="{{busy || !member.loggedIn}}" loading="{{busy}}">确认模拟储值 ¥{{selected === 10000 ? '100' : selected === 20000 ? '200' : '500'}}</button>
+  <view class="rules"><text>累计储值满 200 元可升级 VIP。</text><text>确认后更新演示余额，下方可查看每笔本金与赠金。</text></view>
+  <view class="transactions"><text class="eyebrow">EVERY LITTLE DETAIL</text><text class="serif section-title">余额收支记录</text><view wx:if="{{!records.length}}" class="empty"><text class="muted small">还没有收支记录</text></view><view wx:for="{{records}}" wx:key="id" class="transaction"><view class="row between"><text class="transaction-title">{{item.description}}</text><text class="transaction-amount">{{item.amountText}}</text></view><view wx:if="{{item.type === 'recharge'}}" class="small muted">本金 ¥{{item.principalText}} · 赠金 ¥{{item.giftText}}</view><view class="row between small muted"><text>{{item.dateText}}</text><text>余额 ¥{{item.balanceText}}</text></view></view></view>
+</view>

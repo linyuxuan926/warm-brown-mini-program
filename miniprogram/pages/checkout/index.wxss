@@ -1,0 +1,28 @@
+.checkout-page { padding-bottom: calc(176rpx + env(safe-area-inset-bottom)); }
+.page-heading .eyebrow { font-size: 17rpx; margin-bottom: 10rpx; }
+.checkout-fulfillment { border-top: 2rpx solid #60371F; padding: 26rpx 0 25rpx; border-bottom: 1rpx solid #D9C5A9; }
+.pickup-fields { display: flex; gap: 20rpx; }
+.pickup-fields .field { flex: 1; min-width: 0; }
+.pickup-time { border-bottom: 1rpx solid #E7D8C4; padding: 7rpx 0 23rpx; font-size: 26rpx; }
+.store-address { padding: 20rpx 0 0; font-size: 22rpx; color: #88684F; text-align: left; }
+.address-choice { width: 100%; text-align: left; padding-top: 29rpx; }
+.address-text { margin-top: 12rpx; font-size: 25rpx; color: #88684F; line-height: 1.7; }
+.fulfillment-note { font-size: 22rpx; color: #88684F; line-height: 1.8; background: #F1E5D0; padding: 17rpx 20rpx; border-radius: 10rpx; margin-top: 20rpx; }
+.checkout-products { padding-top: 7rpx; }
+.checkout-products > .eyebrow { font-size: 16rpx; letter-spacing: 2rpx; }
+.checkout-product { display: flex; gap: 24rpx; border-bottom: 1rpx solid #E7D8C4; padding: 25rpx 0; }
+.checkout-product > image { width: 142rpx; height: 142rpx; background: #F5EAD7; border-radius: 16rpx; }
+.checkout-product-copy { flex: 1; min-width: 0; }
+.checkout-product-copy > view:first-child { font-weight: 500; }
+.checkout-product-copy > text { display: block; margin-top: 8rpx; }
+.checkout-product-copy .between { margin-top: 15rpx; }
+.checkout-extras { background: #FFFCF6; padding: 24rpx; border: 1rpx solid #E7D8C4; border-radius: 17rpx; }
+.coupon-row { width: 100%; font-size: 25rpx; min-height: 66rpx; }
+.coupon-row image { width: 39rpx; height: 39rpx; }
+.coupon-label { font-size: 23rpx; color: #775137; text-align: right; flex: 1; }
+.remove-coupon { font-size: 21rpx; text-decoration: underline; color: #88684F; padding: 12rpx 0 0; text-align: right; width: 100%; }
+.remark { height: 150rpx; line-height: 1.65; font-size: 25rpx; }
+.remark-count { text-align: right; font-size: 19rpx; color: #88684F; padding-top: 8rpx; }
+.checkout-totals { padding: 15rpx 5rpx; }
+.checkout-demo { color: #88684F; font-size: 21rpx; text-align: center; margin: 12rpx 0; }
+.submit-btn { min-width: 310rpx; }

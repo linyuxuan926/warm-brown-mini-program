@@ -1,0 +1,22 @@
+{
+  "compiler": "wechat-miniprogram/miniprogram-compiler@0.2.3 bundled wcc/wcsc (legacy compiler, not a DevTools runtime)",
+  "checkedAt": "2026-11-03T09:52:05.742Z",
+  "results": [
+    {
+      "kind": "WXML",
+      "templates": 21,
+      "passed": true,
+      "status": 0,
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "kind": "WXSS",
+      "templates": 24,
+      "passed": true,
+      "status": 0,
+      "stderr": "",
+      "error": ""
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "kind": "native-wechat-devtools-manual-ui-component-verification",
+  "verifiedAt": "2026-11-03T18:26:00+08:00",
+  "manualCompleted": true,
+  "automationCompleted": false,
+  "tool": {
+    "version": "1.06.2504030",
+    "SDKVersion": "3.11.3",
+    "simulator": "iPhone 12/13 (Pro)",
+    "gpuEnabled": true,
+    "disableGPUProcessFlag": false
+  },
+  "configuration": {
+    "lazyCodeLoading": null,
+    "ignoreDevUnusedFiles": false
+  },
+  "capture": {
+    "nativeUI": true,
+    "noResize": true,
+    "renderWait": "Final normal-GPU navigation was allowed about 2 seconds to redraw naturally before capture.",
+    "syntheticRendering": false
+  },
+  "checks": [
+    {
+      "name": "home-cat",
+      "passed": true,
+      "evidence": "home-cat.png",
+      "observed": "WELCOME lettering, pastry cat illustration, pickup/shipping entries, member card and native TabBar render."
+    },
+    {
+      "name": "home-cloud",
+      "passed": true,
+      "evidence": "home-cloud.png",
+      "observed": "Cloud mascot pair, three service entries, stored-value card and dessert/drink shortcuts render after selecting the real theme card and returning home."
+    },
+    {
+      "name": "home-dog",
+      "passed": true,
+      "evidence": "home-dog.png",
+      "observed": "Dog mascot pair, warm woof brand, three service entries, points/coupon cards and native TabBar render."
+    },
+    {
+      "name": "specification-sheet",
+      "passed": true,
+      "evidence": "product-options.png",
+      "observed": "Product sheet opens from menu with mask, temperature/cup/sweetness choices and required-selection state."
+    },
+    {
+      "name": "add-to-cart-and-cart-sheet",
+      "passed": true,
+      "evidence": "cart-sheet.png",
+      "observed": "Selected hot, standard cup and standard sugar; added exactly one latte. Cart sheet shows 1 item and CNY 26.00."
+    },
+    {
+      "name": "restore-existing-cart",
+      "passed": true,
+      "evidence": "cart-restored.png",
+      "observed": "Removed the single temporary item with the minus control. Cart returned to 0 items and CNY 0.00."
+    },
+    {
+      "name": "restore-home-theme",
+      "passed": true,
+      "evidence": "home-cat.png",
+      "observed": "Final home theme restored to cat."
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "home-cat",
+      "path": "D:\\大\\小程序期末\\artifacts\\screenshots\\home-cat.png",
+      "width": 375,
+      "height": 810,
+      "size": 226425,
+      "capturedAt": "2026-11-03T10:25:08.855Z",
+      "source": "native DevTools window screen capture; simulator viewport crop"
+    },
+    {
+      "name": "home-cloud",
+      "path": "D:\\大\\小程序期末\\artifacts\\screenshots\\home-cloud.png",
+      "width": 375,
+      "height": 810,
+      "size": 186515,
+      "capturedAt": "2026-11-03T10:24:07.494Z",
+      "source": "native DevTools window screen capture; simulator viewport crop"
+    },
+    {
+      "name": "home-dog",
+      "path": "D:\\大\\小程序期末\\artifacts\\screenshots\\home-dog.png",
+      "width": 375,
+      "height": 810,
+      "size": 184411,
+      "capturedAt": "2026-11-03T10:21:18.933Z",
+      "source": "native DevTools window screen capture; simulator viewport crop"
+    },
+    {
+      "name": "product-options",
+      "path": "D:\\大\\小程序期末\\artifacts\\screenshots\\product-options.png",
+      "width": 375,
+      "height": 810,
+      "size": 56503,
+      "capturedAt": "2026-11-03T10:14:09.120Z",
+      "source": "native DevTools window screen capture; simulator viewport crop"
+    },
+    {
+      "name": "cart-sheet",
+      "path": "D:\\大\\小程序期末\\artifacts\\screenshots\\cart-sheet.png",
+      "width": 375,
+      "height": 810,
+      "size": 44050,
+      "capturedAt": "2026-11-03T10:20:26.236Z",
+      "source": "native DevTools window screen capture; simulator viewport crop"
+    },
+    {
+      "name": "cart-restored",
+      "path": "D:\\大\\小程序期末\\artifacts\\screenshots\\cart-restored.png",
+      "width": 375,
+      "height": 810,
+      "size": 43298,
+      "capturedAt": "2026-11-03T10:21:16.970Z",
+      "source": "native DevTools window screen capture; simulator viewport crop"
+    }
+  ],
+  "consoleEvidence": {
+    "singleCompile": {
+      "path": "D:\\大\\小程序期末\\artifacts\\screenshots\\native-final-compile.png",
+      "SDKVersion": "3.11.3",
+      "lazyCodeLoading": false,
+      "errors": 0,
+      "warnings": [
+        "SharedArrayBuffer browser deprecation",
+        "getSystemInfo API platform notice"
+      ],
+      "scope": "A single final-source compile at 17:52 local time; this does not assert every later startup has zero platform errors."
+    },
+    "platformErrors": {
+      "mayRemain": true,
+      "code": 41002,
+      "message": "webapi_getwxaasyncinfo:fail appid missing",
+      "context": "Observed during some tourist-AppID launches; distinct from the original Component is not found errors.",
+      "evidence": "D:\\大\\小程序期末\\artifacts\\screenshots\\native-console-diagnostic2.png"
+    },
+    "componentRegistrationErrorsInFinalObservedUI": 0,
+    "componentSelectorWarningsAfterFix": 0
+  },
+  "automation": {
+    "completed": false,
+    "report": "D:\\大\\小程序期末\\artifacts\\screenshots\\component-regression-report.json",
+    "limitations": [
+      "Earlier App.getCurrentPage calls stalled in the SDK 3.17.2 session.",
+      "Last direct connection attempt returned ECONNREFUSED on 127.0.0.1:9420 after the IDE was reopened in ordinary UI mode.",
+      "Automated script failure is preserved; successful checks above came from actual native UI input and visual inspection."
+    ]
+  },
+  "environmentRepair": {
+    "previousGPUEnabled": false,
+    "finalGPUEnabled": true,
+    "reason": "A previous diagnostic launch flag had persisted disable-GPU mode. Only general.enableGPU was restored to true, then the IDE was restarted without --disable-gpu.",
+    "settingsBackup": "C:/Users/明日香/AppData/Local/Temp/warm-brown-devtools-settings-before-gpu-20261103.json",
+    "caveat": "Earlier resize-assisted screenshots were diagnostic only. The six final evidence screenshots above were captured after normal GPU startup without resize."
+  },
+  "businessState": {
+    "cartBefore": {
+      "count": 0,
+      "total": 0
+    },
+    "cartAfter": {
+      "count": 0,
+      "total": 0
+    },
+    "finalTheme": "cat",
+    "ordersCreated": 0,
+    "paymentsPerformed": 0,
+    "accountLoginChanged": false,
+    "storageCleared": false
+  }
+}

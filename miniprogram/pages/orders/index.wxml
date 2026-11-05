@@ -1,0 +1,15 @@
+<view class="page orders-page">
+  <view class="order-heading"><text class="eyebrow">FRESHLY MADE, JUST FOR YOU</text><text class="serif page-title">每一份，都是小期待。</text><text class="muted small">在这里，收好你的每一次暖棕时光。</text></view>
+  <scroll-view scroll-x class="filter-scroll" show-scrollbar="{{false}}"><view class="filters"><button wx:for="{{filters}}" wx:key="id" class="filter {{filter === item.id ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="chooseFilter">{{item.name}}</button></view></scroll-view>
+  <view wx:if="{{error}}" class="empty"><text>{{error}}</text><button class="btn btn-small" bindtap="refresh">重新加载</button></view>
+  <view wx:elif="{{!orders.length}}" class="empty"><image class="empty-art" src="/assets/illustrations/empty-order.png" mode="aspectFit"/><text class="serif empty-title">还没有这类订单</text><text class="muted small">让一杯咖啡，开启今天的小美好。</text><button class="btn btn-small" bindtap="toMenu">去逛逛菜单</button></view>
+  <view wx:else class="order-list">
+    <view wx:for="{{orders}}" wx:key="id" class="order-card" data-id="{{item.id}}" bindtap="detail">
+      <view class="row between"><text class="mode-label">{{item.modeText}}</text><text class="status status-{{item.status}}">{{item.statusText}}</text></view>
+      <view class="muted order-number">NO. {{item.number}} · {{item.dateText}}</view>
+      <view class="product-preview"><image wx:for="{{item.previewItems}}" wx:for-item="product" wx:key="id" src="{{product.image}}" mode="aspectFit"/><view class="preview-copy"><text class="summary">{{item.summary}}</text><text class="muted small">共 {{item.quantity}} 件</text></view></view>
+      <view class="row between order-bottom"><view><text class="small muted">订单金额 </text><text class="price">¥{{item.totalText}}</text></view><view class="order-actions"><button wx:if="{{item.status === 'pending'}}" class="btn-outline btn-small" data-id="{{item.id}}" catchtap="cancel" disabled="{{busy}}">取消</button><button wx:if="{{item.status === 'pending'}}" class="btn btn-small" data-id="{{item.id}}" catchtap="pay">继续支付</button><button wx:elif="{{item.status === 'completed' || item.status === 'cancelled'}}" class="btn-outline btn-small" data-id="{{item.id}}" catchtap="reorder" disabled="{{busy}}">再来一单</button><text wx:else class="link small">查看进度 →</text></view></view>
+    </view>
+  </view>
+  <text class="page-footnote">慢慢烘焙，好好生活 · WARM BROWN</text>
+</view>

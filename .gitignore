@@ -1,0 +1,9 @@
+node_modules/
+project.private.config.json
+*.log
+.DS_Store
+tools-cache/
+/暖棕小屋-源码.zip
+.env
+.env.*
+!.env.example

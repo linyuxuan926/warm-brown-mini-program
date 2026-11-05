@@ -1,0 +1,33 @@
+:host { display: block; }
+.dog-home, .dog-brand, .dog-welcome, .dog-greeting, .dog-services, .dog-store-hours, .open-dot, .dog-benefits, .dog-button { box-sizing: border-box; }
+.dog-button { margin: 0; padding: 0; font-size: 28rpx; font-weight: normal; line-height: 1.5; color: #60371F; transition: transform 140ms ease-out; }
+.dog-button::after { border: 0; }
+.dog-brand { padding: 24rpx 0 68rpx; text-align: center; }
+.dog-brand-art { display: block; width: 440rpx; height: 253rpx; margin: 0 auto -8rpx; }
+.dog-wordmark { font: bold italic 82rpx/1.1 Georgia, serif; letter-spacing: -5rpx; color: #805031; }
+.dog-brand-tagline { display: block; font-size: 16rpx; letter-spacing: 4rpx; color: #88684F; margin-top: 20rpx; }
+.dog-welcome { background: #FFFCF6; border: 1rpx solid #E7D8C4; border-radius: 22rpx 22rpx 0 0; padding: 27rpx 27rpx 19rpx; }
+.dog-greeting { display: flex; align-items: center; justify-content: space-between; gap: 12rpx; }
+.greeting-title { font-size: 29rpx; font-weight: 600; }
+.greeting-note { display: block; font-size: 21rpx; color: #88684F; margin-top: 7rpx; }
+.greeting-button { background: #805031; color: #FFF7E8; padding: 11rpx 24rpx; border-radius: 50rpx; font-size: 23rpx; flex-shrink: 0; }
+.dog-services { display: flex; margin-top: 35rpx; }
+.dog-service { flex: 1; padding: 5rpx 0 13rpx; }
+.dog-service-icon { display: block; width: 108rpx; height: 108rpx; margin: 0 auto 13rpx; }
+.dog-service-title { font: bold 28rpx/1.5 "Songti SC", SimSun, serif; letter-spacing: 2rpx; }
+.dog-service-subtitle { font: 15rpx/1.7 Georgia, serif; color: #88684F; letter-spacing: 1rpx; }
+.dog-store { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 19rpx 24rpx; background: #805031; border-radius: 0 0 18rpx 18rpx; color: #FFF7E8; font-size: 19rpx; }
+.dog-store-hours { display: flex; gap: 10rpx; align-items: center; }
+.open-dot { width: 9rpx; height: 9rpx; border-radius: 50%; background: #E9D5A7; }
+.dog-benefits { display: flex; gap: 20rpx; margin-top: 25rpx; }
+.dog-benefit { display: flex; justify-content: space-between; align-items: center; flex: 1; padding: 22rpx 20rpx; text-align: left; background: #FFFCF6; border: 1rpx dashed #CEB791; border-radius: 15rpx; }
+.benefit-eyebrow { font: 15rpx Georgia, serif; letter-spacing: 2rpx; color: #88684F; }
+.benefit-title { font-size: 27rpx; margin: 8rpx 0; }
+.benefit-note { font: 17rpx Georgia, serif; letter-spacing: 0; color: #88684F; white-space: nowrap; }
+.benefit-icon { width: 63rpx; height: 63rpx; }
+.dog-mail { width: 100%; display: flex; gap: 20rpx; align-items: center; margin-top: 23rpx; padding: 14rpx 10rpx; text-align: left; }
+.dog-mail-icon { width: 57rpx; height: 57rpx; }
+.dog-mail-copy { flex: 1; font-size: 24rpx; }
+.dog-mail-note { display: block; font-size: 19rpx; color: #88684F; margin-top: 3rpx; }
+.pressed { transform: scale(.975); opacity: .86; }
+@media (prefers-reduced-motion: reduce) { .dog-button { transition: none; } .pressed { transform: none; } }

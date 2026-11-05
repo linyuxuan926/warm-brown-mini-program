@@ -1,0 +1,8 @@
+<view class="home-page" wx:if="{{ready}}">
+  <view class="home-top"><text>一口温暖，一点慢生活</text><button class="style-switch" bindtap="styles" hover-class="pressed">首页风格 <text>↗</text></button></view>
+  <home-cat wx:if="{{theme === 'cat'}}" bind:order="onOrder" bind:open="onOpen" />
+  <home-cloud wx:elif="{{theme === 'cloud'}}" bind:order="onOrder" bind:open="onOpen" />
+  <home-dog wx:else logged-in="{{member.loggedIn}}" nickname="{{member.nickname}}" bind:order="onOrder" bind:open="onOpen" bind:login="onLogin" />
+  <view class="home-foot"><view></view><text>BAKED WITH LOVE, SHARED WITH YOU</text><view></view></view>
+</view>
+<view wx:else class="empty"><text>小屋正在准备今日的温暖…</text></view>

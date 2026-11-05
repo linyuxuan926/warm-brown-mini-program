@@ -1,0 +1,2 @@
+const api=require('../../services/api');const ui=require('../../utils/ui');
+Page({data:{order:null},onLoad(options){try{const order=api.getOrder(options.id);this.setData({order,totalText:ui.money(order.total),modeName:ui.MODE_NAMES[order.mode]});}catch(error){ui.toastError(error);}},detail(){wx.redirectTo({url:'/pages/order-detail/index?id='+this.data.order.id});},home(){ui.go('home');},copy(){wx.setClipboardData({data:this.data.order.number});}});

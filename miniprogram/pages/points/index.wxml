@@ -1,0 +1,11 @@
+<view class="page points-page">
+  <view class="points-heading"><text class="eyebrow">COLLECT LITTLE HAPPINESS</text><text class="serif title">日常的小满足，会积攒。</text></view>
+  <view class="points-balance"><view><text class="small muted">我的暖棕积分</text><text class="points-number">{{member.points || 0}}<text> 积分</text></text><text class="small muted">每一份暖意，都算数。</text></view><image src="/assets/icons/points.png" mode="aspectFit"/></view>
+  <view class="notice">完成订单按实付金额累计积分：每满 1 元积 1 分，不足 1 元舍去。同一订单只发放一次。</view>
+  <button wx:if="{{!member.loggedIn}}" class="btn login-btn" bindtap="login">演示登录后兑换</button>
+  <view class="exchange-heading"><text class="serif section-title">用积分，换一份甜</text><text class="small muted">兑换结果保存在本地，优惠券规则以券面为准。</text></view>
+  <view wx:if="{{!offers.length}}" class="empty"><text class="muted small">本期兑换已结束</text></view>
+  <view wx:for="{{offers}}" wx:key="id" class="exchange-card"><view class="exchange-art"><image src="/assets/icons/coupon.png" mode="aspectFit"/><text class="exchange-value">¥{{item.discountText}}</text></view><view class="exchange-copy"><text class="exchange-name">{{item.name}}</text><text class="muted small">满 {{item.thresholdText}} 元可用 · {{item.days}} 天有效</text><text class="muted small">{{item.scopeLabel}} · {{item.modeLabel}}</text><view class="row between"><text class="points-cost">{{item.pointsCost}} 积分</text><button class="btn btn-small" data-id="{{item.id}}" bindtap="redeem" disabled="{{busy || !member.loggedIn || !item.enough || item.claimed}}">{{item.claimed ? '已兑换' : !item.enough ? '积分不足' : '兑换'}}</button></view></view></view>
+  <view class="coupon-jump" bindtap="coupons"><text>去我的券包查看兑换礼物</text><text>→</text></view>
+  <view class="points-history"><text class="eyebrow">YOUR GROWTH, RECORDED</text><text class="serif section-title">积分的来来往往</text><view wx:if="{{!records.length}}" class="empty"><text class="small muted">还没有积分记录</text></view><view wx:for="{{records}}" wx:key="id" class="history-row"><view><text>{{item.description}}</text><text class="small muted">{{item.dateText}}</text></view><view class="history-amount"><text>{{item.amountText}}</text><text class="small muted">结余 {{item.points}} 分</text></view></view></view>
+</view>

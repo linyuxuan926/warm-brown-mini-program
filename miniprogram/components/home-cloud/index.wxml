@@ -1,0 +1,12 @@
+<view class="cloud-home">
+  <image class="cloud-art" src="/assets/illustrations/cloud-hero.png" mode="aspectFit" aria-label="两只戴派对帽的云朵蛋糕举杯庆祝" />
+  <view class="cloud-wordmark">Warm Brown</view><view class="cloud-tagline">有你在的日子，都值得庆祝</view>
+  <view class="cloud-services">
+    <button class="cloud-button cloud-service" data-mode="dineIn" bindtap="order" hover-class="pressed"><image class="cloud-service-icon" src="/assets/icons/dineIn.png" mode="aspectFit" /><view class="cloud-service-title">店内点单</view><text class="cloud-service-subtitle">ORDER</text></button>
+    <button class="cloud-button cloud-service" data-mode="pickup" bindtap="order" hover-class="pressed"><image class="cloud-service-icon" src="/assets/icons/pickup.png" mode="aspectFit" /><view class="cloud-service-title">门店自取</view><text class="cloud-service-subtitle">PICK UP</text></button>
+    <button class="cloud-button cloud-service" data-mode="delivery" bindtap="order" hover-class="pressed"><image class="cloud-service-icon" src="/assets/icons/delivery.png" mode="aspectFit" /><view class="cloud-service-title">外卖配送</view><text class="cloud-service-subtitle">DELIVERY</text></button>
+  </view>
+  <button class="cloud-button cloud-member" bindtap="wallet" hover-class="pressed"><view class="stored-copy"><view class="stored-label">MEMBER</view><view class="stored-label">STORED VALUE</view><view class="stored-link">会员储值 <text class="stored-arrow">↗</text></view></view><view class="mini-vip"><text class="vip-label">VIP</text><image class="vip-art" src="/assets/illustrations/cloud-hero.png" mode="aspectFit" /></view></button>
+  <view class="cloud-categories"><button class="cloud-button cloud-category" data-category="dessert" bindtap="order" hover-class="pressed"><image class="cloud-category-icon" src="/assets/icons/cake.png" mode="aspectFit" /><view class="cloud-category-title">下午茶甜品<text class="cloud-category-subtitle">DESSERT</text></view></button><button class="cloud-button cloud-category" data-category="coffee" bindtap="order" hover-class="pressed"><image class="cloud-category-icon" src="/assets/icons/coffee.png" mode="aspectFit" /><view class="cloud-category-title">咖啡饮品<text class="cloud-category-subtitle">DRINK</text></view></button></view>
+  <button class="cloud-button cloud-post" data-mode="shipping" bindtap="order" hover-class="pressed">一份心意，寄给远方的你 <text class="cloud-post-link">全国邮寄 →</text></button>
+</view>

@@ -1,0 +1,21 @@
+{
+  "kind": "native-wechat-devtools",
+  "startedAt": "2026-11-03T06:12:49.025Z",
+  "project": "D:\\大\\小程序期末",
+  "port": 29420,
+  "screenshots": [],
+  "checks": [],
+  "errors": [
+    {
+      "phase": "capture",
+      "message": "Native DevTools websocket is available, but its simulator has not initialized: Tool.getInfo returned {\"version\":\"1.06.2504030\"} without SDKVersion. This is a native tool/runtime initialization failure, not a port collision.",
+      "stack": "Error: Native DevTools websocket is available, but its simulator has not initialized: Tool.getInfo returned {\"version\":\"1.06.2504030\"} without SDKVersion. This is a native tool/runtime initialization failure, not a port collision.\n    at attach (D:\\大\\小程序期末\\scripts\\capture-native.js:28:21)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async connect (D:\\大\\小程序期末\\scripts\\capture-native.js:50:20)\n    at async run (D:\\大\\小程序期末\\scripts\\capture-native.js:69:12)"
+    }
+  ],
+  "logs": [],
+  "toolInfo": {
+    "version": "1.06.2504030"
+  },
+  "completed": false,
+  "finishedAt": "2026-11-03T06:13:01.158Z"
+}

@@ -1,0 +1,16 @@
+{
+  "kind": "native-wechat-devtools-component-regression",
+  "startedAt": "2026-11-03T09:55:19.580Z",
+  "checks": [],
+  "screenshots": [],
+  "errors": [
+    {
+      "phase": "verification",
+      "message": "connect ECONNREFUSED 127.0.0.1:9420"
+    }
+  ],
+  "console": [],
+  "automationLimitation": "App.getCurrentPage hangs in this DevTools session; route, data, and real handlers are accessed with App.callFunction instead.",
+  "completed": false,
+  "finishedAt": "2026-11-03T09:55:19.586Z"
+}
